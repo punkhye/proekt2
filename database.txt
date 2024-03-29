@@ -1,0 +1,29 @@
+CREATE TABLE MOVIES (
+    movie_id IDENTITY PRIMARY KEY,
+    movie_name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE CINEMAS (
+    cinema_id IDENTITY PRIMARY KEY,
+    cinema_name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE SCREENINGS (
+    screening_id IDENTITY PRIMARY KEY,
+    cinema_id INT REFERENCES Cinemas(cinema_id),
+    movie INT  REFERENCES Movies(movie_id),
+    screening_day INT NOT NULL,
+    screening_month VARCHAR(25) NOT NULL,
+    screening_year INT NOT NULL,
+    screening_time VARCHAR(25) NOT NULL
+);
+
+user = sa
+pass = 123
+
+INSERT INTO MOVIES(MOVIE_NAME) VALUES('YASSS');
+INSERT INTO CINEMAS(CINEMA_NAME) VALUES('slay');
+
+select ARTTABLE.id, name, PRTABLE.proizvoditel,ARTTABLE.idproizvoditel, MTABLE.mashtab,ARTTABLE.idmashtab, opis, kol,cena,datein,year from ARTTABLE,MTABLE,PRTABLE where ARTTABLE.idmashtab=MTABLE.id and ARTTABLE.idproizvoditel=PRTABLE.id
+
+SELECT  Screenings.screening_id, Screenings.cinema_id,movie, Screenings.screening_day, Screenings.screening_month, Screenings.screening_year, Screenings.screening_time from SCREENINGS,CINEMAS, Movies where Screenings.cinema_id=Cinemas.cinema_id and Screenings.movie=movie_id
