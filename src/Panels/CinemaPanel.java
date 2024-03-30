@@ -81,7 +81,7 @@ public class CinemaPanel extends JPanel {
 
             } catch (SQLException ex) {
                 JFrame frame = new JFrame();
-                frame.setSize(500,200);
+                frame.setSize(800,200);
                 frame.setLocationRelativeTo(null);
                 JButton okbutton = new JButton("ok");
                 frame.setLayout(new GridLayout(2,1));
@@ -91,7 +91,7 @@ public class CinemaPanel extends JPanel {
                         frame.dispose();
                     }
                 });
-                JLabel label = new JLabel("Не може да изтрието това кино защото то вече е част от някоя прожекция");
+                JLabel label = new JLabel("Не може да изтрието това кино защото то вече е част от някоя прожекция. Изтрийте първо прожекциите с това кино.");
                 frame.add(label);
                 frame.add(okbutton);
 

@@ -129,7 +129,7 @@ public class MoviePanel extends JPanel {
 
             } catch (SQLException ex) {
                 JFrame frame = new JFrame();
-                frame.setSize(500,200);
+                frame.setSize(800,200);
                 frame.setLocationRelativeTo(null);
                 JButton okbutton = new JButton("ok");
                 frame.setLayout(new GridLayout(2,1));
@@ -139,7 +139,7 @@ public class MoviePanel extends JPanel {
                         frame.dispose();
                     }
                 });
-                JLabel label = new JLabel("Не може да изтрието този филм защото той вече е част от някоя прожекция");
+                JLabel label = new JLabel("Не може да изтрието този филм защото той вече е част от някоя прожекция. Изтрийте първо прожекциите с този филм");
                 frame.add(label);
                 frame.add(okbutton);
 

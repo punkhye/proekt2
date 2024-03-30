@@ -29,21 +29,21 @@ public class UpdateInfoPanel extends JPanel {
 
     }
 
-    class UpdateCinemaAction implements ActionListener{
+    static class UpdateCinemaAction implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
             PopUpCinemaFrame frame = new PopUpCinemaFrame();
         }
     }
 
-    class UpdateMovieAction implements ActionListener{
+    static class UpdateMovieAction implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
             PopUpMovieFrame frame = new PopUpMovieFrame();
         }
     }
 
-    class UpdateScreeningAction implements ActionListener{
+    static class UpdateScreeningAction implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
             PopUpScreeningFrame frame = new PopUpScreeningFrame();

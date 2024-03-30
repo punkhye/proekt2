@@ -23,14 +23,14 @@ public class SearchPanel extends JPanel {
         movieButton.addActionListener(new SearchMovieAction());
     }
 
-    class SearchDateAction implements ActionListener{
+    static class SearchDateAction implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
             PopUpDateSearchFrame frame = new PopUpDateSearchFrame();
         }
     }
 
-    class SearchMovieAction implements ActionListener{
+    static class SearchMovieAction implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
             PopUpCinemaSearchFrame frame= new PopUpCinemaSearchFrame();
