@@ -126,12 +126,7 @@ public class PopUpDateSearchFrame extends JFrame {
             //down panel
             this.add(downPanel);
             downPanel.add(doneButton);
-            doneButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    dispose();
-                }
-            });
+            doneButton.addActionListener(e -> dispose());
 
             if (!buildTable()) {
                 this.dispose();
