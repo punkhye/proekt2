@@ -1,5 +1,6 @@
 package Panels;
 
+import Panels.PopUpFrames.PopUpCinemaSearchFrame;
 import Panels.PopUpFrames.PopUpDateSearchFrame;
 
 import javax.swing.*;
@@ -32,7 +33,7 @@ public class SearchPanel extends JPanel {
     class SearchMovieAction implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-
+            PopUpCinemaSearchFrame frame= new PopUpCinemaSearchFrame();
         }
     }
 

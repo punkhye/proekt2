@@ -59,18 +59,25 @@ public class StartupFrame extends JFrame {
             ako toi e 0(index-a na tab-a na projekciite)
             se mahat starite paneli i se suzdavat novi
             na mqstoto na starite za da se updatenat
-            combobox-ovete
+            combobox-ovete i tablicata za projekcii ako sa bili promeneni dati na projekcii
              */
             int selectedIndex = tab.getSelectedIndex();
             System.out.println(selectedIndex);
-            int index = 0;
-            if(index == selectedIndex){
+
+            if(0 == selectedIndex){
+                // 0 e index-a na purviq tab
+
+                //mahame vsichki paneli zashtoto sme click-nali na purviq
                 tab.removeAll();
 
+                //syzdavat se novi za da se update informaciqta po tablicite
+                cinemaPanel = new CinemaPanel();
+                moviePanel = new MoviePanel();
                 screeningPanel = new ScreeningPanel();
                 searchPanel = new SearchPanel();
                 updateInfoPanel = new UpdateInfoPanel();
 
+                //otnovo se dobavqt kum tab-a
                 tab.add(screeningPanel, "Прожекции");
                 tab.add(cinemaPanel,"Кина");
                 tab.add(moviePanel,"Филми");
@@ -81,6 +88,66 @@ public class StartupFrame extends JFrame {
                 tab.setVisible(true);
 
             }
+
+            //refresh na panela za kina
+            if(1 == selectedIndex){
+
+                //mahat se ot posleden panel do panela za kinata
+                tab.remove(4);
+                tab.remove(3);
+                tab.remove(2);
+                tab.remove(1);
+
+
+                //updatevat se
+                cinemaPanel = new CinemaPanel();
+                moviePanel = new MoviePanel();
+                searchPanel = new SearchPanel();
+                updateInfoPanel = new UpdateInfoPanel();
+
+
+                //pak se dobavqt
+                tab.add(cinemaPanel,"Кина");
+                tab.add(moviePanel,"Филми");
+                tab.add(searchPanel,"Търсене...");
+                tab.add(updateInfoPanel,"Актуализиране на информация...");
+
+                //setva se koi index na tab-a da se otvori (1-ri koito e tab-a za kina)
+                tab.setSelectedIndex(1);
+
+                tab.setVisible(false);
+                tab.setVisible(true);
+
+            }
+
+            //refresh na panela za filmi
+            if(2 == selectedIndex){
+
+                // mahane na tab-ovete na panelite ot posledniq do tozi za filmite
+                tab.remove(4);
+                tab.remove(3);
+                tab.remove(2);
+
+
+                //suzdavat se novi
+                moviePanel = new MoviePanel();
+                searchPanel = new SearchPanel();
+                updateInfoPanel = new UpdateInfoPanel();
+
+                //otnovo se dobavqt
+                tab.add(moviePanel,"Филми");
+                tab.add(searchPanel,"Търсене...");
+                tab.add(updateInfoPanel,"Актуализиране на информация...");
+
+                //setva se koi index na tab-a da se otvori (2-ri koito e tab-a za filmi)
+                tab.setSelectedIndex(2);
+
+                tab.setVisible(false);
+                tab.setVisible(true);
+
+            }
+
+
         }
 
         @Override
