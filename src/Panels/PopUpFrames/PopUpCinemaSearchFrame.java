@@ -57,12 +57,7 @@ public class PopUpCinemaSearchFrame extends JFrame {
         downPanel.add(searchButton);
         searchButton.addActionListener(new SearchAction());
         downPanel.add(closeButton);
-        closeButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-            }
-        });
+        closeButton.addActionListener(e -> dispose());
 
         this.setVisible(true);
 
@@ -113,12 +108,7 @@ public class PopUpCinemaSearchFrame extends JFrame {
             this.add(downPanel);
             downPanel.add(doneButton);
 
-            doneButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    dispose();
-                }
-            });
+            doneButton.addActionListener(e -> dispose());
 
             if (!buildTable()) {
                 this.dispose();
@@ -129,12 +119,7 @@ public class PopUpCinemaSearchFrame extends JFrame {
                 JLabel label = new JLabel("Няма намерени филми");
                 test.add(label);
                 JButton but = new JButton("ok");
-                but.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        test.dispose();
-                    }
-                });
+                but.addActionListener(e -> test.dispose());
                 test.add(but);
                 test.setVisible(true);
             } else {

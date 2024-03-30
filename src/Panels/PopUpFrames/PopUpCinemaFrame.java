@@ -157,12 +157,7 @@ public class PopUpCinemaFrame extends JFrame {
 
 
             editButton.addActionListener(new EditButtonAction());
-            closeButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    dispose();
-                }
-            });
+            closeButton.addActionListener(e -> dispose());
 
             this.setVisible(true);
 
