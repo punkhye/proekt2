@@ -86,10 +86,11 @@ public class PopUpCinemaFrame extends JFrame {
 
                    System.out.println(idCinema);
                    System.out.println(selectedCinema);
+                    UpdateCinemaNameFrame updateWindow = new UpdateCinemaNameFrame(idCinema, selectedCinema);
+                    updateWindow.setVisible(true);
                 }
 
-                UpdateCinemaNameFrame updateWindow = new UpdateCinemaNameFrame(idCinema, selectedCinema);
-                updateWindow.setVisible(true);
+
                 System.out.println("double clicked");
             }
 

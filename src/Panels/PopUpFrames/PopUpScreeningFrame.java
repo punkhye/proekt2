@@ -115,10 +115,10 @@ public class PopUpScreeningFrame extends JFrame {
                     System.out.println(month);
                     System.out.println(year);
                     System.out.println(time);
+                    UpdateScreeningFrame frame = new UpdateScreeningFrame(idScreening, day, month, year, time);
 
                 }
 
-                UpdateScreeningFrame frame = new UpdateScreeningFrame(idScreening, day, month, year, time);
                 System.out.println("double clicked");
             }
 
