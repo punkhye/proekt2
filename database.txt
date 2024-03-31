@@ -21,9 +21,13 @@ CREATE TABLE SCREENINGS (
 user = sa
 pass = 123
 
+
+//dobavqne na nqkvi stoinosti
 INSERT INTO MOVIES(MOVIE_NAME) VALUES('YASSS');
 INSERT INTO CINEMAS(CINEMA_NAME) VALUES('slay');
 
+// ot primerniq proekt
 select ARTTABLE.id, name, PRTABLE.proizvoditel,ARTTABLE.idproizvoditel, MTABLE.mashtab,ARTTABLE.idmashtab, opis, kol,cena,datein,year from ARTTABLE,MTABLE,PRTABLE where ARTTABLE.idmashtab=MTABLE.id and ARTTABLE.idproizvoditel=PRTABLE.id
 
-SELECT  Screenings.screening_id, Screenings.cinema_id,movie, Screenings.screening_day, Screenings.screening_month, Screenings.screening_year, Screenings.screening_time from SCREENINGS,CINEMAS, Movies where Screenings.cinema_id=Cinemas.cinema_id and Screenings.movie=movie_id
+//da se pokaje vsichko ot tablicata SCREENINGS
+SELECT Screenings.screening_id, Cinemas.cinema_name, Movies.movie_name, Screenings.screening_day, Screenings.screening_month, Screenings.screening_year, Screenings.screening_time from SCREENINGS,CINEMAS, Movies where Screenings.cinema_id=Cinemas.cinema_id and Screenings.movie=movie_id
